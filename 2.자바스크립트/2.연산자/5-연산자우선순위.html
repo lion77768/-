@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>연산자 우선순위</title>
+    <script>
+      // 7 + 3 * 2
+      /*
+      0. 문자열연산자
+      1. ++, --
+      2. !
+      3. *, /, +, -
+      4. >, >=, <, <=, ==, !=, ===, !==
+      5. &&
+      6. ||
+      */
+      // 2 * 3 > 4 + 5 && 6 / 3 == 2 || !false;
+      // ( 6 > 9 ) && ( 2 == 2 ) || true;
+      // false && true || true;
+      // false || true;
+      // true
+
+      // 비교문  ? true : false
+
+    </script>
+  </head>
+  <body>
+    <script>
+      let wind = window.innerWidth;
+      let wind2 = window.outerWidth;
+      console.log(wind, wind2)
+      wind > 1000 ?
+        document.body.style.backgroundColor = "#5d994b"
+        : document.body.style.backgroundColor = "#6172ac";
+    </script>
+  </body>
+</html>

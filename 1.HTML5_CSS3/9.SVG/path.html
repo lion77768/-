@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>path</title>
+    <style>
+      svg { width: 500px; height: 500px;
+            border: 1px solid #000; }
+
+      path { fill: none;
+            stroke: #000;
+            stroke-width: 2;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+          }
+      svg:hover path { stroke-dashoffset: 0; transition: 2s; }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <path d="M100 100 L400 100, M400 100 L400 400, M400 400 L100 400, M100 400 L100 100">
+      <!-- <path d="M100 100 L400 100 400 400 100 400 Z">  -->
+      <!-- <path d="M100 100 l300 0 0 300 -300 0 z"> -->
+    </svg>
+  </body>
+</html>

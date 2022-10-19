@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열을 이용한 값 출력</title>
+  </head>
+  <body>
+    <button>과일선택하기</button>
+    <h1>당신이 선택한 과일은?</h1>
+    <script>
+      // 수박, 참외, 딸기, 포도, 사과를 배열선언 후
+      // 버튼을 클릭시 prompt로  1-5의 값 중 하나를 입력하여
+      // 해당인덱스에 해당하는 배열의 값을
+      // h1에 innerText를 사용하여 텍스트로 출력하시오
+      // 함수명 fruit()
+      const btn = document.querySelector('button');
+      const heading = document.querySelector('h1');
+      const fruitList = ['수박', '참외', '딸기', '포도', '사과']
+      let fruit = ()=> {
+        // prompt로 입력받은 값을 변수에 저장
+        let num = prompt("");
+        // 저장된 값에서 -1
+        // num = num - 1;
+        // num -= 1;
+        // 최종값을 h1의 텍스트 값으로 전달
+        heading.innerText = fruitList[num-1]
+      }
+      btn.addEventListener('click', fruit)
+
+    </script>
+  </body>
+</html>

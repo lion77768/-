@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>요소접근1</title>
+  </head>
+  <body>
+    <h1 id="logo">제목</h1>
+    <p>문단입니다1</p>
+    <p>문단입니다2</p>
+    <ul>
+      <li class="list">리스트1</li>
+      <li class="list">리스트2</li>
+      <li class="list">리스트3</li>
+    </ul>
+    <script>
+      // 태그명
+      const pTag = document.getElementsByTagName('p');
+      console.log(pTag)
+      console.log(pTag[0])
+      console.log(pTag[1])
+      // pTag[0].style.color = "red";
+      // pTag[1].style.color = "blue";
+      // for ( let i=0; i<pTag.length; i++ ) {
+      //   pTag[i].style.color = "red";
+      // }
+      pTag.forEach((p)=> {
+        p.style.color = "red"
+      })
+
+
+      // 아이디명
+      const logo = document.getElementById('logo');
+      console.log(logo)
+      logo.style.color = "green";
+      //클래스명
+      const list = document.getElementsByClassName('list');
+      console.log(list)
+      list[0].style.background = "#d5bd97";
+
+    </script>
+  </body>
+</html>

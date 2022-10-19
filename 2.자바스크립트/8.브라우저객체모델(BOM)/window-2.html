@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>window-setInterval</title>
+  </head>
+  <body>
+    <h1>카운팅</h1>
+    <button>카운팅 멈춤</button>
+    <script>
+      const heading = document.querySelector('h1');
+      const btn = document.querySelector("button")
+      let n = 0;
+      let timer = setInterval(function(){
+                    heading.innerText = ++n;
+                  }, 2000)
+      btn.addEventListener('click', ()=>{
+        clearInterval(timer)
+      })
+    </script>
+  </body>
+</html>

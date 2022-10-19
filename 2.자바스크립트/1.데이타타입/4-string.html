@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>string, 문자/문자열타입</title>
+    <script>
+      let str1 = 'hello';
+      let str2 = 'world!';
+
+      let str3 = str1.concat(', ').concat(str2);
+      console.log(str3);
+      let str4 = str1 + ", " + str2;
+      console.log(str4);
+      let str5 = `${str1}, ${str2}`;
+      console.log(str5);
+
+      let alpha = "ABCDEabcde";
+      console.log(alpha.length);
+      console.log(alpha.charAt(0))
+      console.log(alpha.charAt(9))
+      console.log(alpha.charAt(10))
+      console.log(alpha.charAt(-1))
+      console.log(alpha[0])
+      console.log(alpha[9])
+      console.log(alpha[10])
+      console.log(alpha[-1])
+
+      let alpha2 = "1234567";
+      console.log(alpha2.charAt(alpha2.length-5))
+      console.log(alpha2[alpha2.length-5])
+
+      let slogan = "We have to study Javascript!";
+      // substr, substring
+      // console.log(slogan.length)
+      // console.log(slogan.substr(3))
+      // console.log(slogan.substr(3, 4))
+      // console.log(slogan.substring(3))
+      // console.log(slogan.substring(3, 7))
+      // console.log(slogan.substr(slogan.length-1))
+      // console.log(slogan.substr(-1))
+      // console.log(slogan.substring(-1))
+      console.log(slogan.substr(-7, 6)) // script
+
+      let str6 = "JavaScriptJavaScript";
+      console.log(str6.indexOf('Java')); // 0
+      console.log(str6.lastIndexOf('Java')); // 10
+      console.log(str6.lastIndexOf('java')); // -1
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

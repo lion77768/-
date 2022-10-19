@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>line</title>
+    <style>
+      svg { width: 300px; height: 300px;
+            border: 1px solid #000;  }
+      line { stroke: #000;
+            stroke-width: 2;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            /* animation: lineAni 2s linear forwards; */
+      }
+      svg:hover line { stroke-dashoffset: 0;
+                      transition: 2s; }
+
+      @keyframes lineAni {
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Scalable Vector Graphics -->
+    <svg>
+      <line x1="50" y1="150" x2="250" y2="150">
+    </svg>
+  </body>
+</html>

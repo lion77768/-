@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="prefixfree.min.js"></script>
+    <style>
+        body { width: 200px; margin: 100px auto; }
+
+        section { position: relative; width: 200px; height: 200px;
+                  transform-style: preserve-3d;
+                  animation: ani 5s infinite linear;
+        }
+        div { width: 200px; height: 200px;
+              position: absolute; left: 0; top: 0;
+              opacity: 1;
+              font-size: 100px;
+        }
+
+        /* 변환함수 적용하기 */
+        /* 옆면 */
+        div:nth-child(1) { background: red; }
+        div:nth-child(2) { background: green;
+                          transform: translateZ(-200px) rotateY(180deg) }
+        div:nth-child(3) { background: blue;
+            /* transform: translateX(100px) rotateY(90deg) translateX(100px); */
+            transform: translateX(100px) translateZ(-100px) rotateY(90deg);
+        }
+        div:nth-child(4) { background: yellow;
+            transform: translateX(-100px)  translateZ(-100px) rotateY(-90deg);
+        }
+        /* 윗면, 아랫면 */
+        div:nth-child(5) { background: brown;
+            transform: translateY(-100px) rotateX(90deg) translateY(-100px);
+        }
+        div:nth-child(6) { background: pink;
+          transform: translateY(100px) rotateX(90deg) translateY(-100px) rotateY(180deg);
+        }
+
+        @keyframes ani {
+          from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+          to { transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+</html>

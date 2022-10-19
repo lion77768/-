@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div { width: 100px; height: 100px;
+            border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <button>멈추고</button>
+    <button>다시 시작</button>
+    <br><br>
+    <div></div>
+    <script>
+
+      const div = document.querySelector('div');
+      const btn = document.querySelectorAll('button');
+
+      let n;
+      let timer;
+      let moving = ()=> {
+        n = -50;
+        timer = setInterval(()=> {
+          n += 50
+          div.style.marginLeft = `${n}px`;
+        }, 1000)
+      }
+      moving();
+      btn[0].addEventListener('click', ()=> {
+        clearInterval(timer)
+      })
+      btn[1].addEventListener('click', ()=> {
+        moving();
+      })
+    </script>
+  </body>
+</html>

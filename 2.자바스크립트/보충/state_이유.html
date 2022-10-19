@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>카운팅</h1>
+    <button>클릭</button>
+    <script>
+      const h = document.querySelector('h1');
+      const b = document.querySelector('button');
+      let moving = ()=> {
+        setTimeout(()=> {
+          state = 1;
+        }, 3000)
+      }
+      let n = 0;
+      let state = 1;
+      b.addEventListener('click', ()=> {
+        if ( state == 1 ) {
+          state = 0;
+          n++;
+          h.innerText = n;
+          moving();
+        }
+      })
+
+    </script>
+  </body>
+</html>

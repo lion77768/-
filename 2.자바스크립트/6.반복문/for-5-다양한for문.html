@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>다양한 for문</title>
+    <script>
+      let arr = [3, 4, 5];
+      // 일반(고전)
+      // for (i=0; i<arr.length; i++) {
+      //   document.write(arr[i])
+      // }
+
+      // for in
+      for ( i in arr ) {
+        console.log(i)
+        document.write(arr[i])
+      }
+
+      // for of
+      for ( i of arr ) {
+        console.log(i)
+      }
+
+      // forEach((el, index, array)=>{})
+      let items = ['item1','item2','item3'];
+      // items.forEach((item, index, itemAll)=>{
+      //   console.log(item, index)
+      //   console.log(itemAll)
+      // })
+
+      // map
+      items.map((item)=> {
+        document.write(`${item}<br>`)
+      })
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

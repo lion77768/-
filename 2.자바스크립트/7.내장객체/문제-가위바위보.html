@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>가위/바위/보 맞추기</title>
+    <script>
+      document.write("<h1>컴퓨터 가위,바위,보 맞추기</h1>");
+      // 1-3까지 랜덤정수 발생
+      // 컴퓨터 1-가위, 2-바위 3-보
+      let com = Math.ceil(Math.random() * 3)
+      // 입력값 받아오기
+      let user = prompt('가위, 바위, 보 중 선택하시오', '가위')
+      let userNum;
+      switch( user ) {
+        case '가위': userNum = 1; break;
+        case '바위': userNum = 2; break;
+        case '보': userNum = 3; break;
+        default: alert('잘못 입력했습니다!')
+      }
+      document.write(`<img src='play/math_img_${com}.jpg' alt='가위바위보'>`)
+      if ( com == userNum  ) {
+        alert('맞추었습니다! 축하합니다!')
+        document.write(`${user}를 맞추셨습니다`)
+      }
+      else {
+        alert('틀렸습니다! 다시 도전하세요!')
+        document.write(`${user}를 내서 틀렸습니다`)
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>객체의 추가 / 삭제 / 복제</title>
+  </head>
+  <body>
+    <div>
+      <h2>큰제목이 필요합니다</h2>
+    </div>
+    <a href="#">링크</a>
+    <script>
+      const div = document.querySelector('div');
+      const h2 = document.querySelector('h2');
+      const anchor = document.querySelector('a');
+
+      // 객체 생성
+      const h1 = document.createElement('h1');
+      h1.innerText = '큰제목이 추가되었습니다';
+      // 추가 및 이동
+      div.append(h1); // 여러개 추가가능
+      div.prepend(h1);
+      // div.appendChild(h1); // 하나만 적용가능, 텍스트는 오류
+      // div.prependChild(h1); // 오류
+      document.body.insertBefore(anchor, div)
+
+      // 삭제
+      h2.remove();
+      // div.removeChild(h2);
+
+      // 복제
+      const anchor2 = anchor.cloneNode(true);
+      div.append(anchor2)
+
+    </script>
+
+  </body>
+</html>

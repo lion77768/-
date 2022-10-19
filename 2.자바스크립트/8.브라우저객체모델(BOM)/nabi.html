@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body { height: 100vh;
+            margin: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+      img { width: 200px; }
+    </style>
+  </head>
+  <body>
+      <img src="nabi/nabi_1.png" alt="나비">
+      <script>
+        const nabi = document.querySelector('img');
+        let n = 1;
+        function wing() {
+          if ( n == 6 )  n=0;
+          n++;
+          // if ( n == 7 )  n=1;
+          nabi.setAttribute('src', `nabi/nabi_${n}.png`);
+          // if ( n == 6 )  n=0;
+        }
+
+        setInterval(wing, 500)
+        // setInterval(function() {
+        //   wing()
+        // }, 1000)
+      </script>
+  </body>
+</html>

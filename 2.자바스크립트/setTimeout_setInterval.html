@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>setInterval, setTimeout</title>
+  </head>
+  <body>
+    <h1>0</h1>
+    <script>
+      const heading = document.querySelector('h1');
+      let n = 0;
+      // setTimeout(()=> {
+      //   heading.innerText = ++n;
+      // }, 2000)
+      setInterval(()=> {
+        heading.innerText = ++n;
+      }, 2000)
+    </script>
+  </body>
+</html>

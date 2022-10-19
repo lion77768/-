@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>시작문자, 반응문자, 전후문자선택자</title>
+    <style>
+      h1::first-letter { color: red; font-size: 50px; }
+      h1::first-line { background: yellow; }
+
+      h2::selection { background: black; color: yellow; }
+
+      p::before { content: "";
+                  position: absolute;
+                  top: 0; left: 0;
+                  z-index: -1;
+                  width: 1000px;
+                  height: 200px;
+                  background: grey;
+                }
+      p::after { content: "****" }
+      p::first-letter { color: red; }
+
+    </style>
+  </head>
+  <body>
+    <h1>Lorem <br>Ipsum1</h1>
+    <h2>Lorem Ipsum2</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+  </body>
+</html>

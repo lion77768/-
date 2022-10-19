@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>scroll</title>
+    <style>
+      body { width: 150vw; height: 300vh;
+            background: linear-gradient(to bottom, #90e0c8, #7d87cb, #e79edb); }
+      div { position: fixed; top: 10px; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=> {
+        const btn = document.querySelectorAll('button')
+        console.log(btn)
+        btn[0].addEventListener('click', ()=>{
+          window.scrollTo(100, 300);
+          console.log(window.scrollX, window.scrollY);
+        })
+        btn[1].addEventListener('click', ()=>{
+          window.scrollBy(0, 100)
+          console.log(window.scrollY)
+        })
+        btn[2].addEventListener('click', ()=>{
+          window.scrollBy(0, -100)
+          console.log(window.scrollY)
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div>
+      <button>상단에서 300px 아래로</button>
+      <button>현재위치에서 100만큼 아래로</button>
+      <button>현재위치에서 100만큼 위로</button>
+    </div>
+  </body>
+</html>

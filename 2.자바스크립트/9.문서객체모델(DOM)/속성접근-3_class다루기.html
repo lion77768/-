@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>classList</title>
+    <style>
+      div { width: 200px; height: 200px; }
+      .active { border: 1px solid #000; }
+      .target { border: 5px solid #f00; }
+      .on1 { background: #5692d6; color: #fff; }
+      .on2 { font-size: 30px; }
+  </style>
+  </head>
+  <body>
+    <div id="target" class="active">클래스바꾸기</div><br>
+    <button class="btn">클래스추가</button>
+    <button class="btn">클래스제거</button>
+    <button class="btn">클래스변경</button>
+    <button class="btn">클래스토글</button>
+    <script>
+      const target = document.getElementById('target');
+      const btn = document.querySelectorAll('.btn');
+      btn[0].addEventListener('click', ()=> {
+        target.classList.add('on1')
+      })
+      btn[1].addEventListener('click', ()=> {
+        target.classList.remove('active')
+        // target.classList.remove('active', 'on1')
+      })
+      btn[2].addEventListener('click', ()=> {
+        target.classList.replace('active', 'target')
+      })
+      btn[3].addEventListener('click', ()=> {
+        target.classList.toggle('on2')
+      })
+
+
+
+    </script>
+  </body>
+</html>

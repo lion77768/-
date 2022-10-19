@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>float를 활용한 레이아웃</title>
+    <style>
+      /* 초기화 */
+      body { margin: 0; }
+      /* 헤더 */
+      #headerWrap { width: 100%; background: #d4ff9d;
+                    padding-top: 100px;
+                    /* overflow: hidden; */
+                    /* border: 1px solid #000;
+                    box-sizing: border-box; */
+                  }
+      #header { width: 1000px; height: 100px;
+                /* margin: 100px auto 0; */
+                margin: 0 auto;
+                background: #60a40a;
+                /* position: relative; top: 100px; */
+              }
+      #wrap { background: #9ab2cf url(images/sea.jpg) no-repeat center bottom / cover; }
+      /* content */
+      #contentWrap { width: 1000px;
+                    /* margin: 50px auto; */
+                    margin: 0 auto;
+                    padding: 50px 0;
+                    /* background: #f7a7f7; */
+                  }
+      #contentWrap::after { content: ""; display: block; clear: both; }
+      #content1 { width: 400px; height: 400px;
+                  background: #69b989;
+                  margin-right: 50px; float: left; }
+      #content2 { width: 300px; height: 400px;
+                  background: #33985b; float: left; }
+      #banner { width: 200px; height: 300px;
+                background: #7aa4cb; float: right; }
+      /* 푸터 */
+      #footer { width: 1000px; height: 150px; margin: 0 auto;
+                background: gray; }
+
+      /* float 적용시 clear방법
+      1. float를 적용한 요소의 부모가 없는 경우
+        - float를 마지막으로 적용한 요소의 다음요소에
+          clear(left, right, both)를 적용한다
+
+      2. float를 적용한 요소의 부모가 있는 경우
+        - 부모요소에게 height를 적용
+         (자식요소가 가변높이일 경우에 적용 불가능)
+        - 부모요소에게 overflow(auto, hidden)을 적용
+          (원래 overflow 용도가 아니므로 사용을 자제)
+        - 부모요소에게 ::after로 자식요소를 추가하여
+         부모::after { content: ""; display: block; clear: both }
+     */
+    </style>
+  </head>
+  <body>
+    <div id="headerWrap">
+      <header id="header">헤더</header>
+    </div>
+    <div id="wrap">
+      <div id="contentWrap">
+        <section id="content1">섹션1</section>
+        <section id="content2">섹션2</section>
+        <aside id="banner">배너</aside>
+      </div>
+    </div>
+    <footer id="footer">푸터</footer>
+  </body>
+</html>

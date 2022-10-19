@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>속성선택자</title>
+    <style>
+      input[type="text"] { background: blue; color: white; }
+      input[type="password"] { background: red; color: yellow; }
+      /* div img[src="images/ux.gif"] { border: 5px solid #f00; } */
+      /* div img[src ^= "images/"] { border: 5px solid #f00; } */
+      /* div img[src $= "g"] { border: 5px solid #f00; } */
+      div img[src *= "images"] { border: 5px solid #f00; }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text">
+      <input type="password">
+      <input>
+    </form>
+    <div>
+      <img src="./images/node.jpg" alt="" width="200">
+      <img src="images/ux.gif" alt="" width="200">
+      <img src="images/jajq.png" alt="" width="200">
+      <img src="hanbit.png" alt="" width="200" height="250">
+    </div>
+  </body>
+</html>

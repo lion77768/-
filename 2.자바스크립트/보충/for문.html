@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>for문</title>
+  </head>
+  <body>
+    <ul>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+    </ul>
+    <script>
+      const list = document.querySelectorAll('ul li');
+
+      // for ( let i=0; i<list.length ; i++ ) {
+      //   console.log(list[i])
+      // }
+
+      for ( i in list ) {
+        console.log(list[i])
+      }
+      list.forEach((li)=> {
+        console.log(li)
+      })
+
+
+
+
+    </script>
+  </body>
+</html>

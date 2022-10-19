@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>요소접근 - 부모 / 자식</title>
+  </head>
+  <body>
+    <div id="food">
+      <h2>한식</h2>
+      <ul>
+        <li class="rice">김치볶음밥</li>
+        <li>비빔밥</li>
+        <li>전골</li>
+      </ul>
+    </div>
+    <a href="#">이동</a>
+    <script>
+      const anchor = document.querySelector('a');
+      if(anchor.getAttributeNode('href').nodeType == 2) {
+        console.log('true')
+      }
+      else  console.log('false');
+
+      const food = document.getElementById('food');
+      // 자식요소, children[], childNodes[]
+
+      console.log(food.children[0]);
+      console.log(food.childNodes[0]);
+      food.children[0].style.color = "red";
+      // food.childNodes[1].style.color = "red";
+      // food.firstChild.style.color = "red"
+      // food.lastChild.style.color = "red"
+
+      const rice = document.querySelector('.rice');
+      console.log(rice)
+      // 부모요소 parentElement, parentNode;
+      console.log(rice.parentElement)
+      console.log(rice.parentNode)
+      rice.parentElement.style.border = "1px solid #000";
+
+      // 형제요소 nextSibling, prevSibling
+      console.log(rice.nextSibling.nextSibling)
+
+      for ( let name in Node) {
+        console.log(name, Node[name])
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title> 문자 객체 </title>
+        <script>
+          // let userName = prompt("당신의 영문 이름은?","");
+          // let upperName = userName.toUpperCase();  //영문을 대문자로 바꿉니다.
+          //
+          // document.write(upperName + "<br>");
+          //
+          // let userNum = prompt("당신의 연락처는?","");
+          // let result = userNum.substr(0,userNum.length-4)+"****";
+          // // result = result.replaceAll('-', '');
+          // result = result.replace(/-/g, '');
+          //
+          // document.write(result + "<br>");
+
+          const text = "안녕하세요 제 번호는 010-1111-2222 입니다. ";
+          const telNum = text.match(/\d{3}-\d{4}-\d{4}/);
+          console.log(telNum.join())
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

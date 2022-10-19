@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>font-family, font-size, font-weight, font-style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+      @font-face {
+        font-family: chery;
+        src: url(webfont/cheri.ttf),
+            url(webfont/cheri.eot),
+            url(webfont/cheri.woff);
+      }
+
+      h1 { font-family: '나눔스퀘어 Light'; }
+      h2 { font-family: 'Times New Roman', 바탕, batang, serif; }
+      h3 { font-family: Cheri, chery; }
+      h4 { font-family: 'Noto Sans KR', sans-serif; }
+      p { font-family: 'NanumSquare'; }
+      address { font-family: 'Noto Sans KR', sans-serif;
+                font-style: normal;
+                font-weight: 900;
+      }
+      div {
+            /* font-style: italic;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: 'NanumSquare'; */
+            font: 30px NanumSquare, sans-seif;
+          }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem Ipsum 로렘입섬 1234</h1>
+    <h2>Lorem Ipsum 로렘입섬</h2>
+    <h3>WebFont</h3>
+    <h4>웹폰트를 적용합니다</h4>
+    <p>웹폰트를 적용합니다</p>
+    <address>폰트굵기 지정하기</address>
+    <div>폰트속성 한번에 지정하기</div>
+  </body>
+</html>

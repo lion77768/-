@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>number, 숫자타입</title>
+    <script>
+      let a = 100;
+      let b = 3.14;
+      let c = 1e-3;
+      console.log(a, typeof(a));
+      console.log(b, typeof(b));
+      console.log(c, typeof(c));
+      console.log(typeof(1), typeof('1'));
+
+      // let num = Number(prompt("좋아하는 숫자를 입력", "숫자만 입력"));
+      // console.log(num, typeof(num));
+      // let num2 = prompt("좋아하는 숫자를 입력", "숫자만 입력");
+      // console.log(num2, typeof(num2));
+      // let total = num + Number(num2);
+      // document.write(`num, num2의 합은 ${total}입니다`);
+
+      let height1 = prompt("키를 입력하시오", "cm단위");
+      let height2 = prompt("키를 입력하시오", "cm단위");
+      console.log(height1, height2)
+
+      let height3 = parseInt(height1) - parseInt(height2);
+      document.write(`두명의 키차이는 ${height3}입니다`)
+
+      // parseInt는 숫자와 문자가 결합된 경우
+      // 문자를 버리고 숫자(정수)만 숫자타입으로 변환
+      // parseFloat는 소수점까지 변환
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>반응형 적용방법</title>
+    <style>
+      body { margin: 0; }
+      div { width: 1000px; height: 50vh;
+            margin: 0 auto;
+            border: 1px solid #000; }
+
+      @media all and ( min-width: 1000px ) {
+        body { background: #aeddc4; }
+      }
+      @media all and ( max-width: 999px ) and ( min-width: 600px ) {
+        body { background: #f4b191; }
+      }
+      @media all and ( max-width: 599px ) {
+        body { background: gray; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

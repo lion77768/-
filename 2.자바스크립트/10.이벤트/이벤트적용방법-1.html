@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 적용방법</title>
+  </head>
+  <body>
+    <button onclick="change1();">적용1</button>
+    <button>적용2</button>
+    <button>적용3</button>
+    <script>
+      const btn = document.querySelectorAll('button');
+      let change1 = ()=> {
+        document.body.style.background = "skyblue";
+      }
+      let change2 = ()=> {
+        document.body.style.background = "orange";
+      }
+      let change3 = ()=> {
+        document.body.style.background = "lightgreen";
+      }
+      btn[1].onclick = change2;
+      btn[2].addEventListener('click', change3)
+
+    </script>
+  </body>
+</html>

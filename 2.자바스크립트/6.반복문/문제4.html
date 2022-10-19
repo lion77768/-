@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div { width: 200px; height: 200px; float: left;
+            margin: 0 10px; border: 1px solid #000;}
+    </style>
+  </head>
+  <body>
+    <div data-color="red">빨강</div>
+    <div data-color="yellow">노랑</div>
+    <div data-color="blue">파랑</div>
+    <div data-color="green">초록</div>
+    <script>
+      const divs = document.querySelectorAll('div');
+      let bgChange = (div)=> {
+        div.style.backgroundColor = div.getAttribute('data-color');
+      }
+      divs.forEach((div)=> {
+        div.addEventListener('click', ()=> {
+          bgChange(div)
+        })
+      })
+    </script>
+  </body>
+</html>

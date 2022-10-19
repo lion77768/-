@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>transform</title>
+    <style>
+      body { perspective: 1000px; }
+      section { position: relative; width: 300px; height: 300px;
+                font-size: 100px; color: #fff;
+                margin: 50px auto 0;
+                border: 5px solid #000;
+                transform-style: preserve-3d;
+                transition: 1s;
+                transform-origin: 0 0;
+              }
+      section > div { position: absolute; top: 0; left: 0;
+                      width: 300px; height: 300px;
+                      backface-visibility: hidden;
+                      }
+      .front { background: #688712;
+              transform: rotateY(0deg);
+      }
+      .back { background: #4c1d5e;
+              transform: rotateY(180deg);
+      }
+      section:hover { transform: rotateY(180deg) }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="front">앞면</div>
+      <div class="back">뒷면</div>
+    </section>
+  </body>
+</html>

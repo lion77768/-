@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>scroll</title>
+    <style>
+      body { height: 300vh; background: linear-gradient(to bottom, #90e0c8, #7d87cb, #e79edb);  }
+    </style>
+    <script>
+      // 세로스크롤값이 500이상일 경우 배경색 변경
+      document.addEventListener('DOMContentLoaded', ()=>{
+        window.addEventListener('scroll', ()=> {
+          console.log(window.scrollY)
+          if ( window.scrollY >= 500 ) {
+            document.body.style.background = "lightgreen";
+          }
+          else {
+            document.body.style.background = "white";
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

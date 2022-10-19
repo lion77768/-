@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>text 속성</title>
+    <style>
+      /* 밑줄속성 */
+      h1 a { text-decoration: none; }
+      h2 { text-decoration: underline overline line-through; }
+      /* 인라인요소의 정렬속성 */
+      p { background: #c7e9b7; text-align: center;
+          width: 500px; margin: 0 auto; }
+      div { display: block; text-align: center; }
+      strong { background: #9ab7d1;
+              /* text-align: center; */
+              /* display: block; */
+            }
+      h3 { width: 250px; border: 1px solid #000;
+          text-align: justify;
+        }
+      /* 들여쓰기 속성 */
+      h4 { background: #ecaf90;
+          /* padding-left: 100px; */
+          text-indent: -1000px;
+       }
+       h5 { width: 200px; height: 50px;
+           background: url(images/menu.png);
+           /* text-indent: -5000px; */
+           text-indent: 100%;
+           overflow: hidden;
+         }
+       h5:hover { background: url(images/menu_over.png); }
+    </style>
+  </head>
+  <body>
+    <h1><a href="#">Lorem Ipsum</a></h1>
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem Ipsum</p>
+    <div>
+      <strong>Lorem Ipsum</strong>
+    </div>
+    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+    <h5>menu</h5>
+  </body>
+</html>

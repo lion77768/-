@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vertical-align, line-height</title>
+    <style>
+      img { vertical-align: -200px; }
+      /* span { vertical-align: 200px; } */
+      td { border: 1px solid #000;
+          height: 100px;
+          vertical-align: top;
+        }
+      div p { line-height: 50px; }
+      h1 { background: #ffb6c4;
+          height: 200px; width: 100vw;
+          text-align: center;
+          /* line-height: 200px; */
+          display: table-cell;
+          vertical-align: middle;
+        }
+    </style>
+  </head>
+  <body>
+    <img src="images/scene1.jpg" alt="석양">
+    <span>ABCD, gh, 석양에 물든 풍경</span>
+    <table>
+      <tr>
+        <td>셀영역 정렬</td>
+      </tr>
+    </table>
+    <div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a</p>
+    </div>
+    <h1>제목을 가로세로중앙정렬</h1>
+  </body>
+</html>

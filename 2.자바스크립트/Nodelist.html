@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>test</h1>
+      <div class="greeting">Hello</div>
+    </div>
+  </body>
+  <script>
+    const $app = document.getElementById('app');
+    const $greeting = document.querySelectorAll('.greeting');
+    console.log($greeting, $greeting.length); // NodeList [div.greeting] 1
+    $app.insertAdjacentHTML('beforeend', '<div class="greeting">Hello</div>');
+    console.log($greeting, $greeting.length); // NodeList [div.greeting] 1
+  </script>
+</html>

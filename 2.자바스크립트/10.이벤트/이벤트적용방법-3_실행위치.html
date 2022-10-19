@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>실행위치에 따른 문법</title>
+    <script src="event.js" defer></script>
+    <!-- <script src="event.js" async></script> -->
+    <script>
+
+      window.onload = function() {
+        alert('2');
+        // let div = document.querySelector('div');
+        // div.style.color = 'red';
+      }
+
+      window.addEventListener('load',()=> {
+        alert('3');
+        // let div = document.querySelector('div');
+        // div.style.color = 'red';
+      })
+
+      window.addEventListener('DOMContentLoaded', ()=> {
+        alert('4');
+        // let div = document.querySelector('div');
+        // div.style.color = 'red';
+      })
+
+      document.addEventListener('DOMContentLoaded', ()=> {
+        alert('5');
+        // let div = document.querySelector('div');
+        // div.style.color = 'red';
+      })
+
+    </script>
+  </head>
+  <body>
+    <div>색상적용</div>
+    <!-- <script src="event.js"></script> -->
+    <script>
+      alert('1');
+      // let div = document.querySelector('div');
+      // div.style.color = 'red';
+    </script>
+  </body>
+</html>

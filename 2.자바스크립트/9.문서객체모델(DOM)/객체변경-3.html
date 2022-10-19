@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>객체변경</title>
+    <style>
+      div { padding: 10px; border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <button>객체추가</button>
+    <script>
+      // 버튼을 클릭할 때마다 div 객체 색성
+      // div의 텍스트는 'n번째 생성된 div입니다'
+      // 생성된 div 클릭시 삭제되도록
+      const btn = document.querySelector('button');
+      let newDiv;
+      let n = 1; // 1이나 0으로 시작
+      let createDIV = ()=>{
+        newDIV = document.createElement('div');
+        newDIV.innerText = `${n}번째 생성된 DIV입니다`;
+        document.body.append(newDIV);
+        n++;
+        newDIV.addEventListener('click', (e)=> {
+          e.currentTarget.remove();
+          // let removeEle = document.body.removeChild(e.currentTarget)
+          // document.body.prepend(removeEle)
+        })
+      }
+      btn.addEventListener('click', ()=> {
+        createDIV()
+      })
+
+    </script>
+  </body>
+</html>

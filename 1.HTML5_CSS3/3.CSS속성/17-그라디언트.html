@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>그라디언트</title>
+    <style>
+      body { height: 100vh;
+             background: linear-gradient(137deg, #2980B9, #6DD5FA, #8E2DE2, #4A00E0 );
+             background-size: 400% 400%;
+             /* animation: bgMove 10s ease infinite; */
+           }
+     @keyframes bgMove {
+        0% { background-position: 0 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0 50%; }
+     }
+
+      div { width: 300px; height: 300px;
+            border: 1px solid #000;
+            /* background: linear-gradient(90deg, #ff0 0%, #000 100%); */
+            /* background: linear-gradient(180deg, #ff0 50px, #f00 70%, #000); */
+            /* background: linear-gradient(to right, #9ff5ea 50%, #d263df 50%); */
+            background: linear-gradient(to bottom, #9ff5ea 50%, #d263df 50%);
+            background-size: 1px 30px;
+            /* transition: 1s; */
+            /* animation: move 2s linear infinite; */
+          }
+      /* div:hover { background-position-x: 30px; } */
+      @keyframes move {
+        to { background-position-y: -30px; }
+      }
+      h2 { width: 200px; height: 200px;
+          border-radius: 50%;
+          background: radial-gradient(red, yellow);
+          background-position: center;
+          background-size: 100%;
+          animation: radialMove 5s infinite;
+        }
+      @keyframes radialMove {
+        0% { background-size: 100% 100%; }
+        50% { background-size: 200% 200%; }
+        100% { background-size: 100% 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <h2>원형</h2>
+  </body>
+</html>

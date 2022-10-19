@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>박스모델 - width, height, margin, padding</title>
+    <style>
+
+      body {
+            /* margin-top: 50px;
+            margin-right: 100px;
+            margin-bottom: 100px;
+            margin-left: 20px; */
+            /* margin: 50px 100px 100px 20px; top을 기준으로 시계방향 */
+            /* margin: 50px 100px; top=bottom, right=left 뒤에 두값 생략 */
+            /* margin: 20px 50px 30px; right=left만 같을 경우 마지막값 생략가능 */
+            margin: 0;
+      }
+      section { width: 800px; height: 300px;
+                background: #6394d4;
+                margin: 0 auto; }
+      div { width: 200px; height: 200px; background: lightgreen;
+            /* display: inline; */
+            /* display: inline-block; */
+            margin-bottom: 50px;
+            margin-top: 50px;
+            padding: 50px 0 0 50px;
+            box-sizing: border-box;
+      }
+      span { width: 200px; height: 200px; background: skyblue;
+            margin-top: 50px;
+            display: block;
+            /* display: inline-block; */
+      }
+      a { width: 150px; height: 50px; background: yellow; display: block; }
+      input { width: 200px; height: 30px;  }
+      hr { display: none; }
+    </style>
+  </head>
+  <body>
+    <section>블락중앙배열</section>
+    <div>블락그룹</div>
+    <span>인라인그룹</span>
+    <hr>
+    <br>
+    <a href="#">앵커태그</a>
+    <input type="text">
+    <input type="text">
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+  </body>
+</html>

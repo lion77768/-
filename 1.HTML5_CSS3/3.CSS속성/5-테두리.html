@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>테두리, border</title>
+    <style>
+      div { width: 200px; height: 150px;
+            padding: 100px;
+            /* border-style: solid;
+            border-width: 10px;
+            border-color: grey; */
+            border: 10px solid gray;
+            /* box-sizing: border-box; */
+            margin-bottom: 50px;
+          }
+      /*
+      선종류 : solid, dotted, dashed, double
+              inset, outset, groove, ridge
+      */
+      /* h1 { border-top: 3px solid #000;
+           border-bottom: 7px dotted #f00; } */
+      h1 { border: 3px solid #000;
+           border-left: 0; border-right: 0; }
+
+      table { border: 5px solid #f00;
+              /* border-spacing: 100px; */
+              border-collapse: collapse;
+      }
+      th, td { border: 1px solid #000; height: 100px;
+              vertical-align: top; }
+      section { width: 200px; height: 200px;
+                background: #82cbde;
+                margin: 50px 0;
+                /* border-top-left-radius: 50px; */
+                /* border-radius: 50px 100px 150px 200px; */
+                /* border-radius: 50px 0; */
+                border-radius: 100px;
+                transition: 0.2s;
+              }
+      section:hover { border-radius: 50px; }
+      aside { width: 100px; height: 200px;
+              background: #8e951b;
+              border-radius: 100px 0 0 100px;
+              transition: 1s; }
+      aside:hover { transform: rotate(180deg); }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h1>Lorem ipsum dolor amet</h1>
+    </div>
+    <table>
+      <tr>
+        <th>1행<br>1열</th>
+        <th>1행2열</th>
+      </tr>
+      <tr>
+        <td>2행1열</td>
+        <td>2행2열</td>
+      </tr>
+    </table>
+    <section>둥근테두리</section>
+    <aside>반달</aside>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body { background: no-repeat center 100px / 200px; }
+    </style>
+  </head>
+  <body>
+    <button>배경이미지바꾸기</button>
+    <script>
+      // 버튼을 눌러서 원하는 번호를 입력받은 후
+      // 배경이미지를 입력받은 번호의 이미지로 바꾸시오
+      // 함수이름은 imageChange()
+      const btn = document.querySelector('button');
+      let imageChange = ()=> {
+        let num = prompt("원하는 이미지 번호를 입력하시오", "1");
+        document.body.style.backgroundImage = `url(images/pic_${num}.jpg)`;
+      }
+      btn.addEventListener('click', imageChange)
+
+    </script>
+  </body>
+</html>

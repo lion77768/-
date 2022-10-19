@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>문자객체</title>
+    <script>
+      let str = "Hello, Thank you good luck to you";
+      document.write(str.length+'<br>')
+      document.write(str.charAt(7)+'<br>')
+      document.write(str[7]+'<br>')
+      document.write(str.indexOf('you')+'<br>')
+      document.write(str.indexOf('you')+'<br>')
+      document.write(str.indexOf('you', 16)+'<br>')
+      document.write(str.indexOf('your')+'<br>')
+      document.write(str.lastIndexOf('you')+'<br>')
+      document.write(str.lastIndexOf('you', 25)+'<br>')
+      document.write(str.includes('you')+'<br>')
+      document.write(str.includes('like')+'<br>')
+      document.write(str.search('you')+'<br>')
+      document.write(str.search('your')+'<br>')
+      document.write(str.match('luck')+'<br>')
+      document.write(str.match('lucky')+'<br>')
+      document.write(str.substr(7, 5)+'<br>')
+      document.write(str.substring(7, 12)+'<br>')
+      // document.write(str.replace('you', 'me')+'<br>')
+      // document.write(str.replaceAll('you', 'me')+'<br>')
+      document.write(str.replace(/you/g, 'me')+'<br>')
+      // document.write(str.toLowerCase()+'<br>')
+      document.write(str.toUpperCase()+'<br>')
+      document.write('A'.charCodeAt()+'<br>')
+      document.write('B'.charCodeAt()+'<br>')
+      document.write('가'.charCodeAt()+'<br>')
+      document.write('갸'.charCodeAt()+'<br>')
+      document.write('나'.charCodeAt()+'<br>')
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

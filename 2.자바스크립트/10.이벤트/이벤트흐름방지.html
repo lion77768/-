@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 흐름방지</title>
+    <style>
+      div { width: 100px; height: 100px;
+            padding: 50px;
+            border: 1px solid #000; }
+      p { width: 100px; height: 100px;
+          margin: 0;
+          border: 1px solid #000;
+          background: red; }
+      span { font-size: 50px; }
+    </style>
+    <script>
+      // div와 p를 각 클릭시 클릭대상의 배경색이 바뀌고
+      // span에 숫자가 1씩 증가되도록
+      document.addEventListener('DOMContentLoaded', ()=>{
+        const div = document.querySelector('div')
+        const p = document.querySelector('p')
+        const span = document.querySelector('span')
+        let n = 0;
+        let counting = (e)=> {
+          e.currentTarget.style.background = "yellow";
+          span.innerText = ++n;
+          e.stopPropagation();
+        }
+        div.addEventListener('click', counting)
+        p.addEventListener('click', counting)
+      })
+    </script>
+    </head>
+  <body>
+    <div>
+      <p>클릭하세요</p>
+    </div>
+    <span>카운팅</span>
+  </body>
+</html>

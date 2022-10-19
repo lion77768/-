@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>리스트속성</title>
+    <style>
+      body, ul, ol { margin: 0; padding: 0; }
+      ul { background: #9bc3c4; }
+      ul li {
+        /* margin: 10px 0; */
+        list-style: none;
+        font-size: 50px;
+        background: #dabc90 url(images/bullet.png) no-repeat 20px center;
+        text-indent: 50px;
+        /* padding-left: 50px; */
+        /* list-style-type: square;
+        list-style-position: inside;
+        list-style-image: url(./images/bullet.png); */
+      }
+      ol li { list-style-type: lower-roman; }
+
+      /*
+      ul : disc circle square
+      ol: decimal upper-alpha lower-alpha
+          upper-roman lower-roman */
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+    <ol>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ol>
+  </body>
+</html>

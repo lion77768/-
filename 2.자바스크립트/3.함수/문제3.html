@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>문제</title>
+    <style>
+      div { width: 100px; height: 100px; background: #5f4d9c;
+            transition: 0.5s; }
+    </style>
+  </head>
+  <body>
+    <div>박스야 커져라!</div>
+    <script>
+      const div = document.querySelector('div');
+      let num = 100;
+      let sizing = ()=> {
+        // num = num + 50;
+        num += 50;
+        event.currentTarget.style.width = `${num}px`;
+        event.currentTarget.style.height = `${num}px`;
+      }
+      div.addEventListener('click', sizing);
+    </script>
+  </body>
+</html>

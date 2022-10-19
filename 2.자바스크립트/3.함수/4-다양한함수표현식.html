@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수표현식</title>
+    <script>
+      // 선언함수, 명명함수
+      function func1(name) {
+        console.log(name);
+      };
+      func1('홍길동');
+      // 익명함수, 리터럴방식
+      let func2 = function(name) {
+        console.log(name)
+      };
+      func2('이순신');
+      // 즉시실행함수
+      (function() {
+        console.log('신사임당1')
+      })();
+      (function(name) {
+        console.log(name)
+      })('신사임당2');
+      // 화살표 함수
+      let func3 = (name)=> {
+        console.log(name)
+      }
+      func3('김구선생')
+
+    </script>
+    <style>
+      div { width: 200px; height: 200px;
+            border: 1px solid #000; }
+      div a { display: block; height: 200px; }
+    </style>
+  </head>
+  <body>
+    <div><a href="#">색상변경</a></div>
+    <script>
+      const div = document.querySelector('div');
+      // div.addEventListener('click', function() {
+      //   this.style.backgroundColor = "#6f904f";
+      //   console.log(this);
+      // })
+      div.addEventListener('click', (e)=> {
+        e.currentTarget.style.backgroundColor = "#a3a34b";
+        // event.currentTarget.style.backgroundColor = "#a3a34b";
+        console.log(this)
+        console.log(this.tagName)
+        console.log(event.currentTarget)
+        console.log(event.target)
+        console.log(event.currentTarget.tagName)
+        console.log(event.target.tagName)
+      })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>변수타입(데이타타입)</title>
+    <script>
+     //  변수명 생성시 유의사항
+     // 1. 변수의 첫글자는 반드시 영문으로 시작()
+     //     단, (_), ($) 특수기호는 가능
+     //     ex) _name, $name
+     // 2. 대소문자 구분
+     // 3. 특수기호는 _, $ 제외 사용불가능
+     // 4. 숫자사용가능, 시작을 숫자로는 사용X
+
+      var a;
+      a = 10;
+      a = 20;
+      var b = 30;
+      var c = 40, d= 50;
+      var e, f;
+
+      var string = "홍길동"; // string 문자
+      console.log(string, typeof(string))
+
+      var num = 20; // number 숫자
+      console.log(num, typeof(num))
+
+      var obj = { name: "홍길동", age: 20 } // object
+      console.log(obj, typeof(obj))
+
+      var arr = ['사과', '배', '수박']
+      console.log(arr, typeof(arr))
+
+      var state = true; // 리터럴 표기
+      console.log(state, typeof(state))
+
+      var twice;
+      console.log(twice, typeof(twice));
+      twice = 10; // 리터럴 표기법
+      // twice = new Number();
+      console.log(twice, typeof(twice));
+
+      var twice2 = null;
+      console.log(twice2, typeof(twice2))
+
+      // 맞는 문법
+      // var 7num=100;
+      // var &num=100;
+      // var true=1;
+      // var 10=x;
+      // var a+b=20;
+      // var a, b, c=100;
+      // var “홍길동”=name;
+      // var get Number=100;
+      var a = b = c = 10;
+      console.log(a, b, c)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

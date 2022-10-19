@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>position</title>
+    <style>
+      div { width: 100px; height: 100px; font-size: 24px; color: #fff; }
+      div:nth-child(1) { background: #ff6e12;
+                        position: relative;
+                        /* top: 50px; left: 50px; */
+                        /* bottom: 50px; right: 50px;  */
+                        top: -50px; left: -50px;
+                        z-index: 100;
+      }
+      div:nth-child(2) { background: #006ceb;
+                        position: relative;
+      }
+      div:nth-child(3) { background: #01770c;
+                        position: absolute;
+                        /* top: 0; left: 0; */
+                        right: 0; bottom: 0;
+                        z-index: 1000;
+      }
+      div:nth-child(4) { background: #9a10c3; }
+    </style>
+  </head>
+  <body>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+  </body>
+</html>

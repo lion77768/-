@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>부정선택자, not</title>
+    <style>
+      input:not([type="password"]) { background: orange; }
+      div p:not(.select) { color: red; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem Ipsum</p>
+      <p>Lorem Ipsum</p>
+      <p class="select">Lorem Ipsum</p>
+      <p>Lorem Ipsum</p>
+      <p>Lorem Ipsum</p>
+      <p>Lorem Ipsum</p>
+    </div>
+    <form>
+      <input type="text">
+      <input type="password">
+      <input type="text">
+      <input type="password">
+      <input type="text">
+      <input type="tel">
+      <input type="number">
+    </form>
+  </body>
+</html>

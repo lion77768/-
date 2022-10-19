@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>screen</title>
+  </head>
+  <body>
+    <script>
+      console.log(screen.width, screen.height)
+      console.log(screen.availWidth, screen.availHeight)
+      console.log(window.innerWidth, window.innerHeight)
+      console.log(window.outerWidth, window.outerHeight)
+
+      if ( screen.colorDepth <= 32 )
+        document.body.style.background = "red";
+      else
+        document.body.style.background = "beige";
+
+
+
+    </script>
+  </body>
+</html>

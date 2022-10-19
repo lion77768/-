@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열활용 for문</title>
+    <style>
+      h1 { width: 200px; height: 200px;
+          border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <button>100</button>
+    <button>200</button>
+    <button>300</button>
+    <h1>값변경</h1>
+
+    <script>
+      const btns = document.querySelectorAll("button");
+      const heading = document.querySelector('h1');
+      let changeTxt = (btn)=> {
+          heading.innerText = btn.innerText;
+      }
+      for(let i = 0; i<btns.length; i++) {
+        btns[i].addEventListener('click', ()=> {
+          changeTxt(btns[i])
+        })
+      }
+    </script>
+  </body>
+</html>

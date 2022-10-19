@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>아코디언위젯기능</title>
+    <style>
+      div { width: 500px; height: 80px;
+            border: 1px solid #000;
+            overflow: hidden;
+            transition: 0.5s; }
+      input[type="radio"] { display: none; }
+      /* #btn1을 체크하면 #content1의 높이가 300px이 되도록  */
+      #btn1:checked ~ #content1 { height: 300px; }
+      /* #btn2를 체크하면 #content2의 높이가 300px이 되도록 */
+      #btn2:checked ~ #content2 { height: 300px; }
+
+    </style>
+  </head>
+  <body>
+    <label for="btn1">제목1</label>
+    <input type="radio" name="check" id="btn1" checked>
+    <label for="btn2">제목2</label>
+    <input type="radio" name="check" id="btn2">
+    <div id="content1">
+      <h1>Lorem ipsum1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div id="content2">
+      <h1>Lorem ipsum2</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>

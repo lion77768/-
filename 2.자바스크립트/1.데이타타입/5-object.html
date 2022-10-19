@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>object, 객체</title>
+    <script>
+      // 일반적으로 하나의 값으로 표현되는 자료형과 달리
+      // 속성과 값을 쌍으로 가지는 집합
+      // 복잡한 자료를 표현할 때 쓰는 자료형
+      // let people = new Object();
+      // let people = { };
+      // console.log(people, typeof(people))
+      // people.name = "홍길동";
+      // people.age = "20";
+      // people.job = "의적";
+      // console.log(people);
+      // console.log(people.length)
+      // object(객체)는 length 출력 불가능
+
+      let people = { name: "이순신", age: 40, job: "장군" };
+      console.log(people, typeof(people))
+
+      people['name'] = "홍길동";
+      console.log(people);
+      people.age = "20";
+      people.job = "의적";
+      console.log(people);
+
+      console.log(people.name);
+      console.log(people['name']);
+
+      console.log(Object.keys(people))
+      // 객체의 속성명을 배열형태로 출력
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

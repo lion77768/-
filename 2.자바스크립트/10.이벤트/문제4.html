@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>마우스 따라다니기</title>
+    <style>
+      * { cursor: none; }
+      img { position: absolute; pointer-events: none; }
+    </style>
+    <script>
+      // 문서에서 마우스가 움직일때 이미지가 따라서 움지이도록
+      document.addEventListener('DOMContentLoaded', (e)=> {
+        const mouseImg = document.querySelector('img');
+        let moving = (e)=> {
+          mouseImg.style.left = `${e.clientX}px`;
+          mouseImg.style.top = `${e.clientY}px`;
+        }
+        document.addEventListener('mousemove', moving)
+      })
+    </script>
+  </head>
+  <body>
+    <a href="https://www.naver.com">클릭하여 이동하시오</a>
+    <img src="clicker.png" alt="" width="100">
+  </body>
+</html>

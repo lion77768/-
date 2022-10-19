@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>let, const</title>
+    <script>
+      let count = 10;
+      count = 20;
+      function counting() {
+        count = 30;
+        return count;
+      }
+      console.log(counting());
+      console.log(count)
+      {
+        let count = 40;
+      }
+      console.log(count)
+      // let 중복선언 가능하며,
+      // 블락내에 동일한 변수명을 선언할 경우
+      // 블락밖의 동일변수와 다른 변수로 인식
+
+      const count2 = 100;
+      console.log(count2)
+      {
+        const count2 = 200;
+        // count2 = 200;
+      }
+      console.log(count2)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

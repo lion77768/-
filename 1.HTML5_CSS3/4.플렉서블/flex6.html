@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>플렉스 아이템</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #wrap { display: flex;
+                width: 90%; height: 500px;
+                margin: 0 auto;
+                background: #F5FFB7;
+                border: 4px solid #000;
+               }
+        #wrap div { height: 300px; }
+        #wrap div:nth-child(1) { flex: 1;  order: 0; background: red; align-self: flex-end; }
+        #wrap div:nth-child(2) { flex: 2;  order: 0; background: green; align-self: center; }
+        #wrap div:nth-child(3) { flex: 1;  order: 0; background: blue; }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

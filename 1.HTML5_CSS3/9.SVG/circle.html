@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>circle</title>
+    <style>
+      svg { width: 300px; height: 300px;
+            border: 1px solid #000; }
+      circle { fill: none;
+              stroke: #000;
+              stroke-dasharray: 628.3;
+              stroke-dashoffset: 628.3;
+              animation: circleAni 2s linear forwards;
+            }
+      @keyframes circleAni {
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <svg viewBox="0 0 100 100"> -->
+    <svg>
+      <circle r="100" cx="150" cy="150" >
+    </svg>
+  </body>
+</html>

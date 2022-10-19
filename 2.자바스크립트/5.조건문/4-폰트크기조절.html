@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>폰트크기조절</title>
+    <style>
+      div { padding: 20px; background: #93bfa4; }
+    </style>
+  </head>
+  <body>
+    <button>크기+</button>
+    <button>크기-</button>
+    <div>텍스트 크기 조절하시오</div>
+    <script>
+      const btn = document.querySelectorAll('button');
+      const div = document.querySelector('div');
+      let fontSize = 16;
+      let changeSize1 = ()=> {
+        if ( fontSize > 50) { return; }
+        fontSize += 5;
+        div.style.fontSize = `${fontSize}px`;
+      }
+      let changeSize2 = ()=> {
+        if ( fontSize < 5) { return; }
+        fontSize -= 5;
+        div.style.fontSize = `${fontSize}px`;
+      }
+      btn[0].addEventListener("click", changeSize1)
+      btn[1].addEventListener("click", changeSize2)
+    </script>
+  </body>
+</html>

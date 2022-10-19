@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>resize</title>
+  </head>
+  <body>
+    <h1>카운팅</h1>
+    <script>
+      const heading = document.querySelector('h1');
+      let resizing = ()=> {
+        heading.innerText = window.innerWidth;
+        if (window.innerWidth > 1000) {
+          document.body.style.background = "#f0ad8f";
+        }
+        else {
+          document.body.style.background = "#8fbdb9";
+        }
+      }
+      resizing();
+      window.addEventListener('resize', ()=> {
+        resizing();
+      })
+    </script>
+  </body>
+</html>

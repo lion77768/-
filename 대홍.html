@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+       * {margin: 0; padding: 0; box-sizing: border-box; }
+
+    </style>
+  </head>
+  <body>
+    <!-- <div id="videoWrap">
+      <div>
+        <video src="video.mp4" muted autoplay loop ></video>
+      </div>
+    </div> -->
+    <svg>
+
+    <defs> 
+      <mask id="photo-mask">
+        <polygon fill="#fff" points="151.9,159.4 ..." />
+      </mask>
+     </defs>
+    <video src="video.mp4" muted autoplay loop mask="url(#photo-mask)"></video>
+
+    <!-- <image mask="url(#photo-mask)" xlink:href="./image/photo.jpg" x="20" y="10" width="200" height="480" /> -->
+
+  </svg>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행시 디폴트 값 취소</title>
+    <style>
+      div { width: 100px; height: 100px; border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <div>색상변경</div>
+    <a href="https://www.naver.com/">네이버로 이동</a>
+    <form>
+      <input type="checkbox">맥주
+      <input type="checkbox">음료
+    </form>
+    <script>
+      const anchor = document.querySelector('a');
+      const div = document.querySelector('div');
+      const check = document.querySelectorAll('input');
+      // anchor 클릭시 div 색상바꾸기
+      anchor.addEventListener('click', (e)=> {
+        // e.preventDefault();
+        // div.style.background = "yellow";
+        // confirm 에서 확인누르면 이동, 취소누르면 이동X
+        let goLink = confirm('네이버로 이동할까요?');
+        if ( goLink === false ) {
+          e.preventDefault();
+        }
+      })
+      check[0].addEventListener('click', (e)=>{
+        e.preventDefault();
+      })
+
+    </script>
+
+  </body>
+</html>

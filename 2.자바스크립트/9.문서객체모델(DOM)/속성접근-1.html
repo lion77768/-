@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>속성접근</title>
+    <style>
+      .goLink { color: red; }
+    </style>
+  </head>
+  <body>
+    <div id="target" class="active">
+      <a href="#">네이버</a>
+    </div>
+    <script>
+      const div = document.getElementById('target');
+      console.log(div);
+      let idName = div.getAttribute('id');
+      let className = div.getAttribute('class')
+      console.log(idName, className);
+      let idName2 = div.id;
+      let className2 = div.className;
+      console.log(idName2, className2);
+
+      // div.setAttribute('id', 'target2');
+      // div.setAttribute('class', 'active2');
+      div.id = "target2";
+      div.className = "active2";
+      console.log(idName, className)
+
+      const anchor = document.querySelector('a');
+      anchor.setAttribute('href', 'https://www.naver.com/');
+      anchor.setAttribute('target', '_blank');
+      anchor.id = "naver";
+      anchor.className = 'goLink';
+
+      anchor.addEventListener('click', ()=>{
+        event.currentTarget.style.color = "green";
+      })
+
+    </script>
+  </body>
+</html>

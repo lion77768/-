@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>날짜 정보 객체</title>
+    <script>
+      // let ball = new Date(2022, 11, 32);
+      // let bYear = ball.getFullYear();
+      // let bMonth = ball.getMonth();
+      // let bDate = ball.getDate();
+      // // let bDay = ball.getDay();
+      // document.write(`${bYear}월드컵은 ${bMonth+1}월 ${bDate}일에 개최`)
+
+      let toDay = new Date();
+      let nowYear = toDay.getFullYear();
+      let lastDay = new Date(nowYear, 11, 31);
+      let result = lastDay - toDay
+      result = Math.ceil(result / (24*60*60*1000));
+      document.write(`올해 남은 기간은 ${result+1}일입니다`)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

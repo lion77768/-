@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수</title>
+    <script>
+      // 함수란?
+      // 어떤 입력을 받아 특정한 기능이나 계산을 수행 후
+      // 값을 되돌려주는 코드
+      // 단, 입력이나 결과없이 특정기능만 수행도 가능
+      // 함수를 실행하는 걸 보통 호출한다 라고 표현
+
+      // 선언적 함수
+      function test1() {
+        console.log('코드를 실행합니다');
+        return;
+      };
+      test1();
+      function test2() {
+        return;
+        console.log('실행되지 않는 코드');
+      }
+      test2();
+      function test3() {
+        console.log('실행되는 코드');
+        test1();
+      }
+      test3();
+
+      // 익명함수, 무명함수
+      let test4 = function() {
+        console.log('4번째 실행코드')
+      }
+      test4();
+
+      function test5() {
+        let a = 1;
+        return a;
+      }
+      console.log( test5() )
+      console.log( test5 )
+      function test6() {
+        let a = 10;
+        let b = 20;
+        // let c = a + b;
+        return a+b;
+      }
+      console.log(test6())
+
+      function test7(a, b) {
+        let sum = a + b;
+        return sum;
+      }
+      console.log( test7(50, 100) );
+
+      // 함수, 변수 중복선언
+      // func1();
+      var func1 = function() {
+        document.write('무명함수입니다')
+      }
+      function func1() {
+        document.write('선언함수입니다')
+      }
+      func1();
+
+    </script>
+    <style>
+      h1 { width: 300px; border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <br>
+    <h1>크기변경</h1>
+    <button>500</button>
+    <script>
+      const heading = document.querySelector('h1');
+      const btn = document.querySelector('button');
+      let num = btn.innerText;
+      function sizeChange(n) {
+        heading.style.width = `${n}px`;
+      }
+      btn.addEventListener('click', function() {
+        sizeChange(num)
+      })
+
+      function info(name, area) {
+        document.write(`<br>안녕하세요 ${name}입니다<br>`)
+        document.write(`사는 곳은 ${area}입니다<br>`)
+        document.write('--------------------------<br>')
+      }
+      info('홍길동', '경기도 외곽');
+      info('이순신', '경남 남해');
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>과목평균</title>
+    <script>
+      let list1 = ['국어', '수학', '영어']
+      let list2 = ['물리', '화학', '생물']
+      let subject = (list)=> {
+        let sum = 0;
+        for ( let i=0; i<list.length; i++ ) {
+            let value = prompt(`${list[i]}의 점수는?`, '0');
+            sum += Number(value);
+        }
+        let avg = sum / list.length;
+        return avg;
+      }
+      // document.write(`세과목의 평균점수는 ${subject(list1)}점입니다<br>`)
+      // document.write(`세과목의 평균점수는 ${subject(list2)}점입니다`)
+
+      let fruit = ['수박', '참외', '포도'];
+      // console.log(fruit[0])
+      // console.log(fruit[1])
+      // console.log(fruit[2])
+      for ( let i=0; i<3; i++ ) {
+        document.write(`${fruit[i]}<br>`)
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

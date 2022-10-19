@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mousemove</title>
+    <style>
+      div { width: 300px; height: 300px;
+            margin: 50px 0 0 50px;
+            border: 1px solid #000; }
+      p { font-size: 30px; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=> {
+        const div = document.querySelector('div')
+        const p = document.querySelectorAll('p');
+        console.log(div, p)
+        div.addEventListener('mousemove', (e)=> {
+          // screenX/Y, pageX/Y, clientX/Y, offsetX/Y, x / y
+          p[0].innerHTML = `screenX: ${e.screenX}, screenY: ${e.screenY}`;
+          p[1].innerHTML = `pageX: ${e.pageX}, pageY: ${e.pageY}`;
+          p[2].innerHTML = `clientX: ${e.clientX},clientY: ${e.clientY}`;
+          p[3].innerHTML = `offsetX: ${e.offsetX}, offsetY: ${e.offsetY}`;
+          p[4].innerHTML = `X: ${e.x}, Y: ${e.y}`;
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div>마우스위치알아내기</div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

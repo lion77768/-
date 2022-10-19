@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>구조선택자</title>
+    <style>
+      /* 일반구조선택자 */
+      /* h1:first-child { color: red; }
+      p:nth-child(2) { color: red; }
+      p:last-child { color: red; }
+      p:nth-last-child(2) { color: green; } */
+
+      /* 형태구조선택자 */
+      /* p:first-of-type { color: red; }
+      p:nth-of-type(2) { color: red; }
+      p:last-of-type { color: red; } */
+
+      /* 여러개 선택 */
+      section { border: 1px solid #000; }
+      /* section p:nth-child(odd) { background: lightgreen; }
+      section p:nth-child(even) { background: yellow; } */
+      section p:nth-child(2n+1) { background: lightgreen; }
+      section p:nth-child(2n) { background: yellow; }
+      section p:nth-child(3n+1) { color: red; }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Lorem Ipsum dolot sit amet</h1>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+    </div>
+    <section>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+      <p>Lorem Ipsum dolot sit amet</p>
+    </section>
+  </body>
+</html>

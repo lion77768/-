@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>wheel</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=>{
+        const heading = document.querySelector('h1')
+        window.addEventListener('wheel', (e)=> {
+          if ( e.wheelDelta < 0 ) {
+            heading.innerText = "아래방향입니다";
+            document.body.style.background = "#97c889";
+          }
+          else {
+            heading.innerText = "윗방향입니다";
+            document.body.style.background = "#6ac9d2";
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+      <h1>휠 방향 출력하기</h1>
+  </body>
+</html>

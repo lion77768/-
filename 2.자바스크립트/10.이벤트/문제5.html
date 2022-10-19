@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>날개짓하는 나비</title>
+    <style>
+      body { height: 100vh; background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+    </style>
+  </head>
+  <body>
+    <img src="nabi/nabi_1.png" alt="나비" width="300">
+    <script>
+      const nabi = document.querySelector('img');
+      let n = 1;
+      let resizing = ()=> {
+        nabi.src = `nabi/nabi_${++n}.png`;
+        if ( n==6 ) n=0;
+      }
+      window.addEventListener('resize', () => {
+        resizing();
+      })
+    </script>
+  </body>
+</html>

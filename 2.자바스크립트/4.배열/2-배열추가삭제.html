@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열의 추가와 삭제</title>
+    <script>
+      let word = ['a', 'b', 'c', 'd', 'e'];
+      // 원소추가
+      word.push('f'); // 배열의 마지막에 원소추가
+      word = word.concat(['g', 'h'])
+
+      word.unshift('A'); // 배열의 시작에 원소추가
+
+      word.splice(2, 0, 'B');
+      // word.splice(2, 2);
+
+      let word2 = word.slice(1, 3);
+      console.log(word2);
+
+      // 원소삭제
+      word.pop(); // 배열 마지막 원소 삭제
+      word.shift(); // 배열 시작 원소 삭제
+      console.log(word);
+
+      // 배열 정렬
+      let num = [5, 3, 7, 1, 9];
+      // num.sort(); // 오름차순
+      // num.reverse(); // 현재 배열을 역순으로 배열
+      num.sort().reverse();
+      console.log(num);
+
+      // 배열을 string으로
+      let str = ['A반', 'B반', 'C반'];
+      console.log(str, typeof(str))
+      let str2 = str.join(', ');
+      console.log(str2, typeof(str2))
+      // string을 array로
+      let alphabet = 'A BC DE';
+      console.log(alphabet, typeof(alphabet));
+      let alphaArray = alphabet.split(' ');
+      console.log(alphaArray, typeof(alphaArray));
+
+      let num2 = 2;
+      str3 = String(num2)
+      console.log(str3)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hasAttribute, removeAttribute</title>
+    <style>
+      div { width: 200px; height: 200px;
+            border: 1px solid #000; }
+      div.active { background: #4ba224; }
+    </style>
+  </head>
+  <body>
+    <div id="target" class="active">속성제거</div>
+    <script>
+      const target = document.getElementById('target');
+      target.addEventListener('click', (e)=>{
+        if (target.hasAttribute('class')) {
+          e.currentTarget.removeAttribute('class')
+        }
+        else {
+          e.currentTarget.setAttribute('class', 'active')
+        }
+      })
+    </script>
+  </body>
+</html>

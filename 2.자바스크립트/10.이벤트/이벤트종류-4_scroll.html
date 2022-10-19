@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body { height: 300vh; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=> {
+        let state = 1;
+        window.addEventListener('scroll', ()=> {
+          console.log(window.scrollY)
+          if (window.scrollY >= 300 && state == 1) {
+            state = 0;
+            window.scrollBy(0, 200)
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

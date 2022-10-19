@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>연속곡선</title>
+    <style>
+      body { margin: 0; overflow: hidden; padding: 0; }
+      div { position: absolute; top: 100px; left: 0;
+            width: 3100px; display: flex;
+            transform: translateX(-1000px);
+            animation: lineMove 5s linear infinite;
+          }
+      svg { width: 1000px; height: 300px; }
+      path { fill: none; stroke-width: 1; stroke: #000; }
+
+      @keyframes lineMove {
+        to { transform: translate(0); }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <svg>
+        <path d="M0 150 Q125 100 250 150, T520 150, T750 150, 1000 150">
+      </svg>
+    </div>
+    <script>
+      const div = document.querySelector('div');
+      const svg = document.querySelector('svg');
+      const svg1 = svg.cloneNode(true);
+      const svg2 = svg.cloneNode(true);
+
+      div.append(svg1);
+      div.append(svg2);
+
+    </script>
+
+
+  </body>
+</html>

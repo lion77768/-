@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>산술연산자</title>
+    <script>
+      // 산술연산자는 숫자를 계산하는 연산자
+      // ex) 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지
+      let a = 5, b = 3;
+      console.log(a+b); // 8
+      console.log(a-b); // 2
+      console.log(a*b); // 15
+      console.log(a/b); // 1.666666..
+      console.log(a%b); // 2
+      // a, b를 피연산자, +,- 등을 연산자
+      // 피연산자가 두개이상이면 이항연산자(다항연산자)
+
+      // 피연산자가 하나이면 단항연산자
+      let num = 1;
+      // num = num + 1;
+      // num += 1;
+      // num++;
+
+      // console.log(num); // 1
+      // console.log(num+1); // 2
+      // console.log(num); // 1
+
+      // console.log(num); // 1
+      // console.log(++num); // 2
+      // console.log(num); // 2
+
+      // console.log(num) // 1
+      // console.log(num++) // 1
+      // console.log(num) // 2
+
+      console.log(num)
+      console.log(num++)
+      console.log(--num)
+      console.log(num)
+
+      let str = "10";
+      let num2 = 5;
+
+      console.log(str+num2) // 105
+      console.log(str-num2) // 5
+
+    </script>
+  </head>
+  <body>
+    <h1>숫자카운팅</h1>
+    <button>숫자올리기</button>
+    <script>
+      const heading = document.querySelector('h1');
+      const btn = document.querySelector('button');
+      // console.log(heading, btn)
+      let n = 0;
+      let count = ()=> {
+        // n++;
+        heading.innerText = ++n;
+      }
+      btn.addEventListener('click', ()=> {
+        count();
+      })
+
+    </script>
+  </body>
+</html>

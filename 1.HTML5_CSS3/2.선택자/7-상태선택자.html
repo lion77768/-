@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>상태선택자</title>
+    <style>
+      /* input[disabled] { background: grey; } */
+      input:disabled { background: grey; }
+      input:enabled { background: blue; color: white; }
+      input:focus { background: yellow; color: black; }
+
+      input[type="checkbox"]:checked + input[type="text"] { background: red; }
+
+      div { width: 100px; height: 100px; border: 1px solid #000; }
+      /* checked 상태가 되면 div의 배경을 바꾸시오 */
+      input:checked ~ div { background: blue; }
+
+    </style>
+  </head>
+  <body>
+    <input type="checkbox">
+    <input type="text">
+    <input type="text" disabled>
+    <div></div>
+  </body>
+</html>

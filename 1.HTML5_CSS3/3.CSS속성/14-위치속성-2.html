@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>position</title>
+    <style>
+      body { margin: 0; }
+      div { width: 1000px; height: 500px; background: #000;
+            /* position: absolute; top: 200px; left: 100px; */
+            /* margin: 0 auto; position: relative; */
+            position: absolute; top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            /* left: calc(50% - 500px); */
+            /* left: 50%; margin-left: -500px; */
+          }
+      section { width: 150px; height: 150px; background: #ff0;
+                position: absolute; right: 0; bottom: 0; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <section></section>
+    </div>
+  </body>
+</html>
